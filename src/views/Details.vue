@@ -1,11 +1,13 @@
 <template>
-  <div v-if="error">{{ error }}</div>
-  <div v-if="post">
-    <h3>{{ post.title }}</h3>
-    <p class="pre">{{ post.body }}</p>
-  </div>
-  <div v-else>
-    <Spinner />
+  <div class="details">
+    <div v-if="error">{{ error }}</div>
+    <div v-if="post">
+      <h3>{{ post.title }}</h3>
+      <p class="pre">{{ post.body }}</p>
+    </div>
+    <div v-else>
+      <Spinner />
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,12 @@ export default {
 </script>
 
 <style>
+.details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
 .tags a {
   margin-right: 10px;
 }
